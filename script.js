@@ -62,7 +62,7 @@ const TicTacToe = (function() {
             }
 
             currentPlayer = currentPlayer == players[0] ? players[1] : players[0];
-            //update status
+            updateStatus();
         }
 
         const checkWin = () => {
@@ -72,7 +72,7 @@ const TicTacToe = (function() {
         };
 
         const checkDraw = () => {
-            board.every((cell) => cell !== '');
+            return board.every((cell) => cell !== '');
         };
 
         const updateStatus = (message) => {
